@@ -37,7 +37,7 @@ namespace ModernCompilerImplementation.Chapter1.SLP.Lib
     public class OpExp : Exp
     {
         public readonly Exp left, right; public readonly int oper;
-        public static readonly int Plus = 1, Minus = 2, Times = 3, Div = 4;
+        public const int Plus = 1, Minus = 2, Times = 3, Div = 4;
         public OpExp(Exp l, int o, Exp r) { left = l; oper = o; right = r; }
     }
 

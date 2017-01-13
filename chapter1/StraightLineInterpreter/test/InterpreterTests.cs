@@ -8,24 +8,21 @@ namespace ModernCompilerImplementation.Chapter1.SLP.Test
     public class InterpreterTests
     {
         [Fact]
-        public void TestMaxArgs() 
+        public void TestInterpret()
         {
             var interpreter = new Interpreter();
 
-            var maxArgsProgram1 = interpreter.Maxargs(Program1.Program);
-            Assert.Equal(2, maxArgsProgram1);
+            var interpretProgram1ActualOutput = interpreter.Interpret(Program1.Program);
+            var interpretProgram1ExpectedOutput = "6 54";
+            Assert.Equal(interpretProgram1ExpectedOutput, interpretProgram1ActualOutput);
             
-            var maxArgsProgram2 = interpreter.Maxargs(Program2.Program);
-            Assert.Equal(3, maxArgsProgram2);
+            var interpretProgram2ActualOutput = interpreter.Interpret(Program2.Program);
+            var interpretProgram2ExpectedOutput = "3\n6 9 6";
+            Assert.Equal(interpretProgram2ExpectedOutput, interpretProgram2ActualOutput);
 
-            var maxArgsProgram3 = interpreter.Maxargs(Program3.Program);
-            Assert.Equal(2, maxArgsProgram3);
-        }
-
-        [Fact]
-        public void TestInterpret()
-        {
-            Assert.True(false, "Test not yet implemented.");
+            var interpretProgram3ActualOutput = interpreter.Interpret(Program3.Program);
+            var interpretProgram3ExpectedOutput = "7 14 8\n8";
+            Assert.Equal(interpretProgram3ExpectedOutput, interpretProgram3ActualOutput);
         }
     }
 }
