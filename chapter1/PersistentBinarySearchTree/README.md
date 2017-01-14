@@ -1,5 +1,16 @@
 ## Chapter 1: Exercise 1
 
+### .Net Core Project
+The exercise implementation is in `/src` and is a .Net Core library project.
+
+The test implentation is in `/test` and is a .Net Core XUnit project.
+
+Use `dotnet restore` and `dotnet build` in each project folder after cloning the repository.
+
+Use `dotnet test` in the `/test` directory to run the tests.
+
+### Instructions
+
 This simple program implements persistent functional binary search trees, so
 that if tree2=insert(x,tree1), then tree1 is still available for lookups
 even while tree2 can be used.
