@@ -1,0 +1,1 @@
+..\..\tools\csharpcc\csharpcc_gen.bat MiniCSharp\src minicsharp.csc
